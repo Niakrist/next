@@ -8,6 +8,9 @@ export default function Home(): React.DetailedHTMLProps<
   HTMLElement
 > {
   const [rating, setRating] = useState(0)
+
+  console.log('env: ', process.env.NEXT_PUBLIC_DOMAIN)
+
   return (
     <main className={styles.main}>
       <nav>
