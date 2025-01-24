@@ -10,6 +10,14 @@ export default function Home(): React.DetailedHTMLProps<
   const [rating, setRating] = useState(0)
   return (
     <main className={styles.main}>
+      <nav>
+        <ul className={styles.nav}>
+          <li>Курсы</li>
+          <li>Сервисы</li>
+          <li>Книги</li>
+          <li>Товары</li>
+        </ul>
+      </nav>
       <Rating rating={rating} setRating={setRating} isEditable={true} />
     </main>
   )

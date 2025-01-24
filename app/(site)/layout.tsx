@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import type { Metadata } from 'next'
 import { Noto_Sans_KR } from 'next/font/google'
 import React from 'react'
@@ -25,13 +26,11 @@ export default function RootLayout({
 }>): React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement> {
   return (
     <html lang='en'>
-      <body className={getNotoSansKR.className}>
-        <Header />
-        <div>
-          <Sidebar />
-          <div>{children}</div>
-        </div>
-        <Footer />
+      <body className={cn(getNotoSansKR.className, styles.wrapper)}>
+        <Header className={styles.header} />
+        <Sidebar className={styles.sidebar} />
+        <div className={styles.content}>{children}</div>
+        <Footer className={styles.footer} />
       </body>
     </html>
   )
